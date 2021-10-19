@@ -56,7 +56,11 @@ def display_the_frq_array(lst):
                     max_char = char
                     max_frq_char = frq[char]
                 frq[char] += 1
-    
+    for word in lst:
+        if any(max_char in c for c in word):
+            print(max_frq_char + 1)
+        else:
+            print(word)
 
 def main():
     problem = input("Choose a problem: ")
